@@ -1,0 +1,31 @@
+main: com.blockmart.mmoskillsystem.MMOSkillSystem
+name: MMOSkillSystem
+version: '1.0.0-SNAPSHOT'
+api-version: 1.20
+author: BlockMart
+description: An MMORPG-style skill leveling system.
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - MythicMobs
+  - Citizens
+  - ProtocolLib
+  - LuckPerms
+commands:
+  skills: 
+    description: Base command for the MMO Skill System.
+    usage: /skills
+    permission: mmoskills.player
+    permission-message: You do not have permission to use this command.
+  skilladmin:
+    description: Admin commands for the MMO Skill System.
+    usage: /skilladmin
+    permission: mmoskills.admin
+    permission-message: You do not have permission to use this command.
+permissions:
+  mmoskills.player:
+    description: Allows players to view their skills.
+    default: true
+  mmoskills.admin:
+    description: Allows admins to manage skill data.
+    default: op
